@@ -13,7 +13,7 @@ function new(string name="write_read_golden_seq");
     super.new(name);
 endfunction
 
-virtual task bocy();
+virtual task body();
     for(int i=0; i<apb_sram_pkg::PAGE_NUM; i++) begin
         trans = new($sformatf("RW_Trans_%0d", i));
         start_item(trans);
